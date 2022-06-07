@@ -10,7 +10,9 @@ Visual Studio 2022でBlazor Serverのプロジェクトを新規作成します�
 1. フレームワークで **.NET 6.0(長期的なサポート)** を選択、**Docker を有効にする** にチェックを入れ、Docker OS を **Linux**にする。その後、「次へ」ボタンをクリックする。  
 ![追加情報](../Images/NewProject-4.png)
 1. プロジェクトが新規作成され、開発用のコンテナが開始されるまで待つ。  
-![コンテナ開始](../Images/NewProject-5.png)
+![コンテナ開始](../Images/NewProject-5.png)  
+code: ![tag](../Images/tag.png) [Step 1](https://github.com/04100149/TodoList/releases/tag/step1)
+
 
 ## 動作確認
 1. ![デバックの開始](../Images/NewProject-6.png) ボタンをクリックする。  
