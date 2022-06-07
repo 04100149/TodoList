@@ -21,7 +21,7 @@ code: ![tag](../Images/tag.png) [Step 1](https://github.com/04100149/TodoList/re
 ```
 5. Todo.razorを保存する。  
 1. **Shared** フォルダの **NavMenu.razor** を開く。  
-1. NavMenu.razorに次のコードを追加する。    
+1. [NavMenu.razor](https://github.com/04100149/TodoList/blob/6e3732fc737448440d44eebc03fa161cb38d2f79/TodoList/Shared/NavMenu.razor#L27-L31) に次のコードを追加する。    
 ```HTML+razor
         <div class="nav-item px-3">
             <NavLink class="nav-link" href="todo">
