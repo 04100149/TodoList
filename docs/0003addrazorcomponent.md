@@ -1,7 +1,7 @@
-# razorコンポーネントの追加
+# Webページの追加
 code: ![tag](../Images/tag.png) [Step 1](https://github.com/04100149/TodoList/releases/tag/step1)  
 
-目標：Todo razorコンポーネントを追加して、表示する。
+目標：Todoページを追加して、表示する。
 
 1. ソリューション エクスプローラの **Pages** フォルダを右クリックし、 コンテキストメニューの **追加 - Razorコンポーネント** をクリックする。
 1. 名前を **Todo.razor** にして **追加** ボタンを押す。
