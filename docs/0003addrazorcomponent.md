@@ -2,7 +2,8 @@
 code: ![tag](../Images/tag.png) [Step 1](https://github.com/04100149/TodoList/releases/tag/step1)  
 
 ## Point
-- Todoページを追加して、表示する。
+- Todoページを追加する。
+- サイドメニューから呼び出せるようにする。
 
 ## 手順
 1. ソリューション エクスプローラの **Pages** フォルダを右クリックし、 コンテキストメニューの **追加 - Razorコンポーネント** をクリックする。
