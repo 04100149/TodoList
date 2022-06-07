@@ -1,8 +1,10 @@
 # Webページの追加
 code: ![tag](../Images/tag.png) [Step 1](https://github.com/04100149/TodoList/releases/tag/step1)  
 
-目標：Todoページを追加して、表示する。
+## Point
+- Todoページを追加して、表示する。
 
+## 手順
 1. ソリューション エクスプローラの **Pages** フォルダを右クリックし、 コンテキストメニューの **追加 - Razorコンポーネント** をクリックする。
 1. 名前を **Todo.razor** にして **追加** ボタンを押す。
 1. PagesフォルダにTodo.razorが追加される。  
