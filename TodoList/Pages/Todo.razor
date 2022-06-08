@@ -1,9 +1,75 @@
 ﻿@page "/todo"
+@using TodoList.Data
 
 <PageTitle>Todo</PageTitle>
 
 <h1>Todo</h1>
 
+<div>
+    @foreach(var todo in todos)
+    {
+    <table>
+        <tr>
+            <td align="right" valign="top"><span class="oi oi-key"/></td>
+            <td>@todo.Id</td>
+        </tr>
+        <tr>
+            <td align="right" valign="top"><span class="oi oi-tag"/></td>
+            <td>@todo.Title</td>
+        </tr>
+        <tr>
+            <td align="right" valign="top"><span class="oi oi-clock"/></td>
+            <td>@todo.TargetDate.ToString("yyyy/MM/dd")</td>
+        </tr>
+        <tr>
+            <td align="right" valign="top"><span class="oi oi-comment-square"/></td>
+            <td >@todo.Memo</td>
+        </tr>
+    </table>        
+    }
+</div>
+
+<div>
+    <table>
+        <tr>
+            <td align="right" valign="top">タイトル：</td>
+            <td><input placeholder="Something todo" @bind="newTodo"/></td>
+        </tr>
+        <tr>
+            <td align="right" valign="top">期限：</td>
+            <td><input type="date" @bind="newDate"/></td>
+        </tr>
+        <tr>
+            <td align="right" valign="top">メモ：</td>
+            <td><textarea cols="30" rows="5" @bind="newMemo"/></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="right">
+                <button class="btn btn-primary" @onclick="AddTodo">
+                    <span class="oi oi-plus" /> Add todo
+                </button>
+            </td>
+        </tr>
+    </table>
+</div>
+
 @code {
+    private List<TodoItem> todos = new();
+
+    private int latestId = 1;
+    private string? newTodo;
+    private DateTime newDate = DateTime.Today.AddDays(7);
+    private string newMemo;
+
+    private void AddTodo()
+    {
+        if (!string.IsNullOrWhiteSpace(newTodo))
+        {
+            TodoItem todo = new TodoItem {Id=latestId++, Title = newTodo, TargetDate = newDate, Memo=newMemo };
+            newTodo = string.Empty;
+            newMemo = string.Empty;
+            todos.Add(todo);
+        }
+    }
 
 }
