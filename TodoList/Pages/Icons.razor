@@ -1,0 +1,42 @@
+﻿@page "/icons"
+@using System.Text.RegularExpressions
+
+<PageTitle>Icons</PageTitle>
+
+<h1>Icons</h1>
+
+@if(icons != null)
+{
+    <div >
+        @foreach(var icon in icons)
+        {
+            <div class="thumbnail">
+                <span class="oi @icon" style="margin: 10px" />@icon
+            </div>
+        }
+    </div>
+}
+
+
+@code {
+    private List<string> icons;
+
+    protected override async Task OnInitializedAsync()
+    {
+        List<string> names = new List<string>();
+
+        using(StreamReader sr = new StreamReader(@"./wwwroot/css/open-iconic/font/css/open-iconic-bootstrap.min.css"))
+        {
+            string css = await sr.ReadToEndAsync();
+
+            foreach(Match m in Regex.Matches(css, @"[.]oi-[^:]+"))
+            {
+                if (m.Success)
+                {
+                    names.Add(m.Value.Substring(1));
+                }
+            }
+        }
+        icons = names;
+    }
+}
