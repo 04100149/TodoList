@@ -2,9 +2,9 @@
 code: ![tag](../Images/tag.png) [Step 4](https://github.com/04100149/TodoList/releases/tag/step4)  
 
 ## Point
-- [永続化の設計をする]()
-- [Todoを保存できるようにする]()
-- [Todoを読み込めるようにする]()
+- [永続化の設計をする](#%E6%B0%B8%E7%B6%9A%E5%8C%96%E3%81%AE%E8%A8%AD%E8%A8%88%E3%82%92%E3%81%99%E3%82%8B)
+- [Todoを保存できるようにする](#todo%E3%82%92%E4%BF%9D%E5%AD%98%E3%81%A7%E3%81%8D%E3%82%8B%E3%82%88%E3%81%86%E3%81%AB%E3%81%99%E3%82%8B)
+- [Todoを読み込めるようにする](#todo%E3%82%92%E8%AA%AD%E3%81%BF%E8%BE%BC%E3%82%81%E3%82%8B%E3%82%88%E3%81%86%E3%81%AB%E3%81%99%E3%82%8B)
 
 ## 手順
 ### 永続化の設計をする
@@ -61,7 +61,7 @@ code: ![tag](../Images/tag.png) [Step 4](https://github.com/04100149/TodoList/re
 ```
 ### Todoを読み込めるようにする
 - `./wwwroot/todos`に格納されているファイルをリストアップする。
-- ファイルごとに、`JsonSerializer`でデシリアライズし`TodoItem`インスタンスを`todos`変数に追加する。
+- ファイルごとに、`JsonSerializer`でデシリアライズしてできる`TodoItem`インスタンスを`todos`変数に追加する。
 1. Todo.razorを開き、`#region 永続化`内に読み込み用のコードを追加する。
 ```C#
     private List<TodoItem> LoadTodoFiles()
