@@ -9,5 +9,6 @@
 1. [Iconのスタイルを確認する](docs/0004icons.md)
 1. [Todoを足せるようにする](docs/0005addtodo.md)
 1. [データを永続化する](docs/0006persistence.md)
+1. [Todoを編集/完了/削除できるようにする](docs/0007editremove.md)
 
 

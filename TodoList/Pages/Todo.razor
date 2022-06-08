@@ -8,12 +8,17 @@
 <h1>Todo</h1>
 
 <div>
-    @foreach(var todo in todos)
+    @foreach(var todo in todos.Where<TodoItem>(x=>!x.IsDone))
     {
     <table>
         <tr>
             <td align="right" valign="top"><span class="oi oi-key"/></td>
-            <td>@todo.Id</td>
+            <td>
+                @todo.Id
+                <span class="oi oi-pencil" @onclick=@(_=>EditTodo(todo)) />
+                <span class="oi oi-check" @onclick=@(_=>DoneTodo(todo)) />
+                <span class="oi oi-trash" @onclick=@(_=>RemoveTodo(todo)) />
+            </td>
         </tr>
         <tr>
             <td align="right" valign="top"><span class="oi oi-tag"/></td>
@@ -33,6 +38,13 @@
 
 <div>
     <table>
+        @if (editingItem != null)
+        {
+        <tr>
+            <td align="right" valign="top">ID：</td>
+            <td>@editingItem.Id</td>
+        </tr>
+        }
         <tr>
             <td align="right" valign="top">タイトル：</td>
             <td><input placeholder="Something todo" @bind="newTodo"/></td>
@@ -47,9 +59,21 @@
         </tr>
         <tr>
             <td colspan="2" align="right">
+            @if(editingItem == null)
+            {
                 <button class="btn btn-primary" @onclick="AddTodo">
                     <span class="oi oi-plus" /> Add todo
                 </button>
+            }
+            else
+            {
+                <button class="btn btn-primary" @onclick="DoneEdit">
+                    <span class="oi oi-check" /> Done
+                </button>
+                <button class="btn btn-primary" @onclick="CancelEdit">
+                    <span class="oi oi-x" /> Cancel
+                </button>
+            }
             </td>
         </tr>
     </table>
@@ -73,6 +97,55 @@
             todos.Add(todo);
             SaveTodoFile(todo);
         }
+    }
+
+    private TodoItem? editingItem = null;
+
+    private void EditTodo(TodoItem todo)
+    {
+        if (todo.IsDone){ return; }
+        editingItem = todo;
+        newTodo = todo.Title;
+        newDate = todo.TargetDate;
+        newMemo = todo.Memo;
+    }
+
+    private void InitializeEdit()
+    {
+        newTodo = string.Empty;
+        newMemo = string.Empty;
+        newDate = DateTime.Today.AddDays(7);
+        editingItem = null;        
+    }
+
+    private void CancelEdit()
+    {
+        InitializeEdit();
+    }
+
+    private void DoneEdit()
+    {
+        if (!string.IsNullOrWhiteSpace(newTodo))
+        {
+            editingItem.Title = newTodo;
+            editingItem.TargetDate = newDate;
+            editingItem.Memo = newMemo;
+            SaveTodoFile(editingItem);
+            InitializeEdit();
+        }
+    }
+
+    private void DoneTodo(TodoItem todo)
+    {
+        todo.EndDate = DateTime.Today;
+        todo.IsDone = true;
+        SaveTodoFile(todo);
+    }
+
+    private void RemoveTodo(TodoItem todo)
+    {
+        todos.Remove(todo);
+        RemoveTodoFile(todo.Id);
     }
 
     #region 永続化
@@ -109,6 +182,19 @@
             }
         }
         return todos;
+    }
+
+    private void RemoveTodoFile(int id)
+    {
+        string path = GetPath(id);
+        try
+        {
+            File.Delete(path);    
+        }
+        catch(Exception ex)
+        {
+            System.Diagnostics.Trace.WriteLine(ex.Message);
+        }
     }
     #endregion 永続化
 
