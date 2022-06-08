@@ -5,10 +5,15 @@
 
 <PageTitle>Todo</PageTitle>
 
-<h1>Todo</h1>
+<h1>Todo 
+    <span style="font-size: 0.5em;">
+        <span @onclick="@(_=>showClosed=false)" style="font-weight: @(showClosed ? "normal" : "bold");">@todos.Count(todo=>!todo.IsDone) Open</span>
+        <span @onclick="@(_=>showClosed=true)" style="font-weight: @(showClosed ? "bold" : "normal");">@todos.Count(todo=>todo.IsDone) Closed</span>
+    </span>
+</h1>
 
 <div>
-    @foreach(var todo in todos.Where<TodoItem>(x=>!x.IsDone))
+    @foreach(var todo in todos.Where<TodoItem>(x=>!x.IsDone || showClosed))
     {
     <table>
         <tr>
@@ -81,6 +86,8 @@
 
 @code {
     private List<TodoItem> todos = new();
+
+    private bool showClosed = false;
 
     private int latestId = 1;
     private string? newTodo;
