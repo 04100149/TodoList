@@ -12,4 +12,6 @@
 1. [Todoを編集/完了/削除できるようにする](docs/0007editremove.md)
 1. [完了したTodoを表示できるようにする](docs/0008showclosed.md)
 1. [装飾する](docs/0009decoration.md)
+1. [モジュール化する](docs/0010modularization.md)
+
 

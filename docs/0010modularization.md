@@ -2,8 +2,8 @@
 code: ![tag](../Images/tag.png) [Step 8](https://github.com/04100149/TodoList/releases/tag/step8)  
 
 ## Point
-- [razorコンポーネント化する]()
-- [永続化コードをサービス化する]()
+- [razorコンポーネント化する](#razor%E3%82%B3%E3%83%B3%E3%83%9D%E3%83%BC%E3%83%8D%E3%83%B3%E3%83%88%E5%8C%96%E3%81%99%E3%82%8B)
+- [永続化コードをサービス化する](#%E6%B0%B8%E7%B6%9A%E5%8C%96%E3%82%B3%E3%83%BC%E3%83%89%E3%82%92%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E5%8C%96%E3%81%99%E3%82%8B)
 
 ## 手順
 ### razorコンポーネント化する
@@ -260,7 +260,162 @@ div.section {
 ```
 16. [TodoBox.razor.css]()を保存する。
 ### 永続化コードをサービス化する
+1. ソリューション エクスプローラの **Data** フォルダを右クリックし、 コンテキストメニューの **追加 - クラス** をクリックする。
+1. 名前を **TodoService.cs** にして **追加** ボタンを押す。  
+![追加されたTodoService.cs](../Images/modularization-4.png)
+1. **TodoService.cs** を編集し、Todo.razorから永続化のコードを移動する。  
+```C#
+namespace TodoList.Data
+{
+    public class TodoService
+    {
+        #region 永続化
+        private const string todoFolder = @"./wwwroot/todos";
 
+        private string GetPath(int id)
+        {
+            return string.Format(@"{0}/{1}.json", todoFolder, id);
+        }
+
+        private void SaveTodoFile(TodoItem todo)
+        {
+            string json = JsonSerializer.Serialize(todo);
+            string path = GetPath(todo.Id);
+            using (StreamWriter sw = new StreamWriter(path, false, Encoding.UTF8))
+            {
+                sw.Write(json);
+            }
+        }
+
+        private List<TodoItem> LoadTodoFiles()
+        {
+            List<TodoItem> todos = new List<TodoItem>();
+            foreach (var path in Directory.EnumerateFiles(todoFolder))
+            {
+                using (StreamReader sr = new StreamReader(path, Encoding.UTF8))
+                {
+                    string json = sr.ReadToEnd();
+                    TodoItem? todo = JsonSerializer.Deserialize<TodoItem>(json);
+                    if (todo != null)
+                    {
+                        todos.Add(todo);
+                    }
+                }
+            }
+            return todos;
+        }
+
+        private void RemoveTodoFile(int id)
+        {
+            string path = GetPath(id);
+            try
+            {
+                File.Delete(path);
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Trace.WriteLine(ex.Message);
+            }
+        }
+        #endregion 永続化
+    }
+}
+```
+4. 先頭に`using`を追加する。  
+```diff
++using System.Text;
++using System.Text.Json;
+```
+5. 次のように`public`メソッドを追加する。  
+```C#
+        public void SaveTodo(TodoItem todo)
+        {
+            SaveTodoFile(todo);
+        }
+        public List<TodoItem> LoadTodos()
+        {
+            return LoadTodoFiles();
+        }
+        public void RemoveTodo(TodoItem todo)
+        {
+            RemoveTodoFile(todo.Id);
+        }
+```
+6. [TodoService.cs]()を保存する。
+7. `Program.cs`を編集し、`TodoService`を`Singleton`として登録する。
+```diff
+ // Add services to the container.
+ builder.Services.AddRazorPages();
+ builder.Services.AddServerSideBlazor();
+ builder.Services.AddSingleton<WeatherForecastService>();
++builder.Services.AddSingleton<TodoService>();
+```
+8. [Program.cs]()を保存する。
+9. Todo.razorを編集し、`TodoService`を`inject`する。
+```diff
+ @page "/todo"
+ @using System.Text
+ @using System.Text.Json
+ @using TodoList.Data
++@inject TodoService TodoService
+ 
+ <PageTitle>Todo</PageTitle>
+```
+10. `OnInitialize`を次のように変更する。  
+```diff
+     protected override void OnInitialized()
+     {
+-        todos = LoadTodoFiles();
++        todos = TodoService.LoadTodos();
+         latestId = todos.Select<TodoItem, int>(x => x.Id).DefaultIfEmpty().Max() + 1;
+     }
+```
+11. `AddTodo`を次のように変更する。  
+```diff
+     private void AddTodo()
+     {
+         if (!string.IsNullOrWhiteSpace(newTodo))
+         {
+             TodoItem todo = new TodoItem {Id=latestId++, Title = newTodo, TargetDate = newDate, Memo=newMemo };
+             newTodo = string.Empty;
+             newMemo = string.Empty;
+             todos.Add(todo);
+-            SaveTodoFile(todo);
++            TodoService.SaveTodo(todo);
+         }
+     }
+```
+12. `DoneEdit``DoneTodo``RemoveTodo`を次のように変更する。
+```diff
+     private void DoneEdit()
+     {
+         if (!string.IsNullOrWhiteSpace(newTodo))
+         {
+             editingItem.Title = newTodo;
+             editingItem.TargetDate = newDate;
+             editingItem.Memo = newMemo;
+-            SaveTodoFile(editingItem);
++            TodoService.SaveTodo(editingItem);
+             InitializeEdit();
+         }
+     }
+ 
+     private void DoneTodo(TodoItem todo)
+     {
+         todo.EndDate = DateTime.Today;
+         todo.IsDone = true;
+-        SaveTodoFile(todo);
++        TodoService.SaveTodo(todo);
+     }
+ 
+     private void RemoveTodo(TodoItem todo)
+     {
+         todos.Remove(todo);
+-        RemoveTodoFile(todo.Id);
++        TodoService.RemoveTodo(todo);
+     }     
+```
+13. [Todo.razor]()を保存する。
 
 code: ![tag](../Images/tag.png) [Step 9](https://github.com/04100149/TodoList/releases/tag/step9)  
 
