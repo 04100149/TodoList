@@ -15,62 +15,10 @@
 <div>
     @foreach(var todo in todos.Where<TodoItem>(x=>!x.IsDone || showClosed).OrderBy<TodoItem, DateTime>(x=>x.TargetDate))
     {
-    <div class="section" style="background-color: @GetBackgroundColor(todo)">
-        <table>
-            <tr>
-                <td align="right" valign="top"><span class="oi oi-key"/></td>
-                <td>
-                    @todo.Id
-                    <ul class="icon">
-                        <li>
-                            <span class="oi oi-pencil" @onclick=@(_=>EditTodo(todo)) />
-                        </li>
-                        <li>
-                            <span class="oi oi-check" @onclick=@(_=>DoneTodo(todo)) />
-                        </li>
-                        <li>
-                            <span class="oi oi-trash" @onclick=@(_=>RemoveTodo(todo)) />
-                        </li>
-                    </ul>
-                </td>
-            </tr>
-            <tr>
-                <td align="right" valign="top"><span class="oi oi-tag"/></td>
-                <td>@todo.Title</td>
-            </tr>
-            <tr>
-                <td align="right" valign="top"><span class="oi oi-clock"/></td>
-                <td>
-                    @todo.TargetDate.ToString("yyyy/MM/dd")
-                    @if(todo.IsDone)
-                    {
-                        <span class="oi oi-check" style="margin-left: 10px;"/>
-                        @todo.EndDate.ToString("yyyy/MM/dd")
-                    }
-                    else
-                    {
-                        var days = (todo.TargetDate - DateTime.Today).Days;
-                        @if(days == 0)
-                        {
-                            <span style="color: red; margin-left: 10px;">今日まで！</span>
-                        }
-                        else if(days<0)
-                        {
-                            <span style="color: red; margin-left: 10px;">@(-days)日 オーバー</span>
-                        }
-                        else
-                        {
-                            <span style="color: black; margin-left: 10px;">あと @(days)日</span>                            
-                        }
-                    }
-                </td>
-            </tr>
-            <tr>
-                <td align="right" valign="top"><span class="oi oi-comment-square"/></td>
-                <td ><p class="ellipsis" title=@todo.Memo>@todo.Memo</p></td>
-            </tr>
-        </table>
-    </div>
+        <TodoBox Item=@todo 
+            OnClickEditCallback=@(item=>EditTodo(item))
+            OnClickDoneCallback=@(item=>DoneTodo(item))
+            OnClickRemoveCallback=@(item=>RemoveTodo(item))/>
     }
 </div>
 
@@ -186,14 +134,6 @@
     {
         todos.Remove(todo);
         RemoveTodoFile(todo.Id);
-    }
-
-    private string GetBackgroundColor(TodoItem todo)
-    {
-        if (todo.IsDone){ return "silver"; }
-        if (todo.TargetDate == DateTime.Today) { return "khaki"; }
-        if (todo.TargetDate < DateTime.Today) { return "lightpink"; }
-        return "lightblue";
     }
 
     #region 永続化
