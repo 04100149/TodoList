@@ -5,9 +5,11 @@ namespace TodoList.Data
 {
     public class TodoService
     {
+        public event EventHandler TodoChanged = delegate { };
         public void SaveTodo(TodoItem todo)
         {
             SaveTodoFile(todo);
+            TodoChanged(this, EventArgs.Empty);
         }
         public List<TodoItem> LoadTodos()
         {
@@ -16,6 +18,7 @@ namespace TodoList.Data
         public void RemoveTodo(TodoItem todo)
         {
             RemoveTodoFile(todo.Id);
+            TodoChanged(this, EventArgs.Empty);
         }
 
         #region 永続化

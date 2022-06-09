@@ -3,6 +3,7 @@
 @using System.Text.Json
 @using TodoList.Data
 @inject TodoService TodoService
+@implements IDisposable
 
 <PageTitle>Todo</PageTitle>
 
@@ -141,6 +142,17 @@
     {
         todos = TodoService.LoadTodos();
         latestId = todos.Select<TodoItem, int>(x => x.Id).DefaultIfEmpty().Max() + 1;
+        TodoService.TodoChanged += TodoChanged;
     }
 
+    private async void TodoChanged(object? sender, EventArgs args)
+    {
+        todos = TodoService.LoadTodos();    
+        await InvokeAsync(StateHasChanged);
+    }
+
+    public void Dispose()
+    {
+        TodoService.TodoChanged -= TodoChanged;
+    }
 }
