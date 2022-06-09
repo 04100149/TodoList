@@ -13,5 +13,6 @@
 1. [完了したTodoを表示できるようにする](docs/0008showclosed.md)
 1. [装飾する](docs/0009decoration.md)
 1. [モジュール化する](docs/0010modularization.md)
+1. [複数クライアント対応](docs/0011multiclient.md)
 
 
