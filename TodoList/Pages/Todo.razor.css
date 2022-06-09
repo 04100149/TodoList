@@ -1,0 +1,49 @@
+﻿div.section {
+    display: inline-block; 
+    vertical-align: top;
+    background-color: lightskyblue;
+    border-radius: 10px;
+    margin: 10px; 
+    padding: 10px; 
+    box-sizing: border-box; 
+}
+
+div.section:hover {
+    background-color: lightblue;
+}
+
+div.section p {
+    clear: both;
+}
+
+div.section ul.icon {
+    list-style: none;
+    float: right;
+    margin-bottom: 0px;
+}
+
+div.section ul.icon li {
+    display: inline;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+div.section ul.icon li {
+    opacity: 0;
+}
+
+div.section:hover ul.icon li {
+    opacity: 0.5;
+}
+
+div.section ul.icon li:hover {
+    opacity: 1;
+}
+
+.ellipsis {
+    max-width: 300px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 0px;
+}
