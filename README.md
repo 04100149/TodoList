@@ -16,4 +16,3 @@
 1. [複数クライアント対応](docs/0011multiclient.md)
 1. [Dockerでホストする](docs/0012docker.md)
 
-

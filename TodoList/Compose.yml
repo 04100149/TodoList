@@ -1,0 +1,10 @@
+﻿version: "3"
+services:
+  front-end:
+    image: todolist:latest
+    ports:
+     - 8000:80
+    volumes:
+      - todos:/app/wwwroot/todos
+volumes:
+  todos:
