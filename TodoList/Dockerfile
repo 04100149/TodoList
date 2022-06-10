@@ -7,12 +7,6 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-
-RUN apt-get update && apt-get install -y unzip
-ADD http://aww001-0m0176.jp.ykgw.net/content/files/NW/Internet/ZscalerRootCertificate-2048-SHA256.zip /tmp
-Run unzip /tmp/ZscalerRootCertificate-2048-SHA256.zip -d /usr/local/share/ca-certificates/
-RUN chmod 644 /usr/local/share/ca-certificates/ZscalerRootCertificate-2048-SHA256.crt && update-ca-certificates
-
 COPY ["TodoList/TodoList.csproj", "TodoList/"]
 RUN dotnet restore "TodoList/TodoList.csproj"
 COPY . .
