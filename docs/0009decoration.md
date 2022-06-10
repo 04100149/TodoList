@@ -225,3 +225,8 @@ code: ![tag](../Images/tag.png) [Step 8](https://github.com/04100149/TodoList/re
 - 期限順に表示される。
 - 状況ごとに色分けされる。
 ![すべて表示](../Images/decoration-5.png)
+
+***
+- Prev [完了したTodoを表示できるようにする](docs/0008showclosed.md)
+- Next [モジュール化する](docs/0010modularization.md)
+

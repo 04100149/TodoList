@@ -46,4 +46,7 @@ code: ![tag](../Images/tag.png) [Step 2](https://github.com/04100149/TodoList/re
 1. サイドメニューの **Todo** をクリックすると、Todoページが開く。    
 ![Todoページ](../Images/AddRazorComponent-3.png)
 
+***
+- Prev [プロジェクトの構造](docs/0002projectstructure.md)
+- Next [Iconのスタイルを確認する](docs/0004icons.md)
 

@@ -118,3 +118,8 @@ code: ![tag](../Images/tag.png) [Step 3](https://github.com/04100149/TodoList/re
 ![コンテナ開始](../Images/Icons-5.png)
 1. ブラウザのアドレスに`/icons`を追加して`Enter`キーを押す。    
 ![Icon確認ページ](../Images/Icons-6.png)
+
+***
+- Prev [Webページの追加](docs/0003addrazorcomponent.md)
+- Next [Todoを足せるようにする](docs/0005addtodo.md)
+
