@@ -1,5 +1,5 @@
 # Dockerでホストする
-code: ![tag](../Images/tag.png) [Step 10](https://github.com/04100149/TodoList/releases/tag/step10)  
+code: ![tag](../Images/tag.png) [Step 10](https://github.com/04100149/TodoList/tree/step10)  
 
 ## Point
 - [Dockerイメージをビルドする](#docker%E3%82%A4%E3%83%A1%E3%83%BC%E3%82%B8%E3%82%92%E3%83%93%E3%83%AB%E3%83%89%E3%81%99%E3%82%8B)
@@ -39,7 +39,7 @@ code: ![tag](../Images/tag.png) [Step 10](https://github.com/04100149/TodoList/r
  COPY --from=publish /app/publish .
  ENTRYPOINT ["dotnet", "TodoList.dll"]
 ```
-2. [Dockerfile]()を保存する。
+2. [Dockerfile](https://github.com/04100149/TodoList/blob/step11/TodoList/Dockerfile)を保存する。
 3. `Dockerfile`を右クリックして、`Dockerイメージのビルド`を実行する。
 ### Compose.ymlを定義する
 1. ソリューション エクスプローラの **TotoList** フォルダを右クリックし、 コンテキストメニューの **追加 - 新しい項目** をクリックする。
@@ -62,7 +62,7 @@ volumes:
   todos:
 ```
 6. `8000`ポートが使用済みならば、空いているポート番号に変更する。  
-1. Compose.ymlを保存する。
+1. [Compose.yml](https://github.com/04100149/TodoList/blob/step11/TodoList/Compose.yml)を保存する。
 ### Docker Composeで実行する
 1. ソリューション エクスプローラの **TotoList** フォルダを右クリックし、 コンテキストメニューの **ターミナルで開く** をクリックする。
 1. `開発者用 PowerShell`が開く。  
@@ -76,8 +76,7 @@ docker compose up -d
 5. 'Docker Desktop'を開くと、実行されていることが確認できる。  
 ![Docker Desktop](../Images/docker-5.png)
 
-
-code: ![tag](../Images/tag.png) [Step 11](https://github.com/04100149/TodoList/releases/tag/step11)  
+code: ![tag](../Images/tag.png) [Step 11](https://github.com/04100149/TodoList/tree/step11)  
 
 ## 動作確認
 1. ブラウザを起動し、次のアドレスへ接続する。  

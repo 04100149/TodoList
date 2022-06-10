@@ -1,5 +1,5 @@
 # Todoを足せるようにする
-code: ![tag](../Images/tag.png) [Step 3](https://github.com/04100149/TodoList/releases/tag/step3)  
+code: ![tag](../Images/tag.png) [Step 03](https://github.com/04100149/TodoList/tree/step03)
 
 ## Point
 - [データモデルを追加する](#%E3%83%87%E3%83%BC%E3%82%BF%E3%83%A2%E3%83%87%E3%83%AB%E3%82%92%E8%BF%BD%E5%8A%A0%E3%81%99%E3%82%8B)
@@ -27,7 +27,7 @@ namespace TodoList.Data
     }
 }
 ```
-5. TodoItem.csを保存する。  
+5. [TodoItem.cs](https://github.com/04100149/TodoList/blob/step04/TodoList/Data/TodoItem.cs)を保存する。  
 ### データを表示する
 1. Todo.razorを開き、`@code{}`内に`TodoItem`のリストを追加する。
 1. `TodoItem`を使うために`@using TodoList.Data`を追加する。
@@ -70,7 +70,7 @@ namespace TodoList.Data
     }
 </div>
 ```
-4. Icons.razorを保存する。
+4. Todo.razorを保存する。
 ### 入力項目を追加する
 - `input`や`textarea`で入力項目を作成する。  
 - 入力項目と変数を`@bind`で紐づける。
@@ -121,9 +121,10 @@ namespace TodoList.Data
         }
     }
 ```
-4. [Icons.razor]()を保存する。
+4. [Todo.razor](https://github.com/04100149/TodoList/blob/step04/TodoList/Pages/Todo.razor)を保存する。
 
-code: ![tag](../Images/tag.png) [Step 4](https://github.com/04100149/TodoList/releases/tag/step4)  
+code: ![tag](../Images/tag.png) [Step 04](https://github.com/04100149/TodoList/tree/step04)
+
 
 ## 動作確認
 1. ![デバックの開始](../Images/NewProject-6.png) ボタンをクリックする。  

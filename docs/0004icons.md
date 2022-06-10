@@ -1,5 +1,5 @@
 # Iconのスタイルを確認する。
-code: ![tag](../Images/tag.png) [Step 2](https://github.com/04100149/TodoList/releases/tag/step2)  
+code: ![tag](../Images/tag.png) [Step 02](https://github.com/04100149/TodoList/tree/step02)
 
 ## Point
 - [Icon確認ページを追加する](#icon%E7%A2%BA%E8%AA%8D%E3%83%9A%E3%83%BC%E3%82%B8%E3%82%92%E8%BF%BD%E5%8A%A0%E3%81%99%E3%82%8B)
@@ -40,13 +40,13 @@ code: ![tag](../Images/tag.png) [Step 2](https://github.com/04100149/TodoList/re
 ```
 5. Icons.razorを保存する。  
 ### 静的ファイルを読み込む
-- Iconは、[open-iconic-bootstrap.min.css](https://github.com/04100149/TodoList/blob/master/TodoList/wwwroot/css/open-iconic/font/css/open-iconic-bootstrap.min.css)ファイルにcssとして定義されている。  
+- Iconは、[open-iconic-bootstrap.min.css](https://github.com/04100149/TodoList/blob/step03/TodoList/wwwroot/css/open-iconic/font/css/open-iconic-bootstrap.min.css)ファイルにcssとして定義されている。  
 ![open-iconic-bootstrap.min.css](../Images/Icons-2.png)
 - Iconは次のように定義されている。
 ```CSS
 ….oi-task:before{content:'\e0c8'}…
 ```
-- Iconsページが読み込まれたときに、[open-iconic-bootstrap.min.css](https://github.com/04100149/TodoList/blob/master/TodoList/wwwroot/css/open-iconic/font/css/open-iconic-bootstrap.min.css)ファイルを読み込み、正規表現で`oi-***`を抽出する。
+- Iconsページが読み込まれたときに、[open-iconic-bootstrap.min.css](https://github.com/04100149/TodoList/blob/step03/TodoList/wwwroot/css/open-iconic/font/css/open-iconic-bootstrap.min.css)ファイルを読み込み、正規表現で`oi-***`を抽出する。
 1. Icons.razorを開き、`@code{}`内に`OnInitializedAsync()`を追加する。
 ```HTML+razor
     protected override async Task OnInitializedAsync()
@@ -95,7 +95,7 @@ code: ![tag](../Images/tag.png) [Step 2](https://github.com/04100149/TodoList/re
     box-sizing: border-box;
 }
 ```
-6. Icons.razor.cssを保存する。  
+6. [Icons.razor.css](https://github.com/04100149/TodoList/blob/step03/TodoList/Pages/Icons.razor.css)を保存する。  
 1. Icons.razorを開く。
 1. divエレメントにスタイルを設定する。
 ```diff
@@ -107,10 +107,10 @@ code: ![tag](../Images/tag.png) [Step 2](https://github.com/04100149/TodoList/re
             </div>
         }
 ```
-9. Icons.razorを保存する。
+9. [Icons.razor](https://github.com/04100149/TodoList/blob/step03/TodoList/Pages/Icons.razor)を保存する。
 
+code: ![tag](../Images/tag.png) [Step 03](https://github.com/04100149/TodoList/tree/step03)
 
-code: ![tag](../Images/tag.png) [Step 3](https://github.com/04100149/TodoList/releases/tag/step3)  
 
 ## 動作確認
 1. ![デバックの開始](../Images/NewProject-6.png) ボタンをクリックする。  

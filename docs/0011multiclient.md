@@ -1,5 +1,5 @@
 # 複数クライアント対応
-code: ![tag](../Images/tag.png) [Step 9](https://github.com/04100149/TodoList/releases/tag/step9)  
+code: ![tag](../Images/tag.png) [Step 09](https://github.com/04100149/TodoList/tree/step09)  
 
 ## Point
 - [TodoServiceにイベントを追加する](#todoservice%E3%81%AB%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E3%82%92%E8%BF%BD%E5%8A%A0%E3%81%99%E3%82%8B)
@@ -107,7 +107,7 @@ code: ![tag](../Images/tag.png) [Step 9](https://github.com/04100149/TodoList/re
 +            }
          }
 ```
-5. TodoService.csを保存する。
+5. [TodoService.cs](https://github.com/04100149/TodoList/blob/step10/TodoList/Data/TodoService.cs)を保存する。
 6. **Todo.razor**を編集し、`latestId`を削除する。
 ```diff
      private bool showClosed = false;
@@ -175,9 +175,9 @@ code: ![tag](../Images/tag.png) [Step 9](https://github.com/04100149/TodoList/re
         TodoService.TodoChanged -= TodoChanged;
     }
 ```
-4. [Todo.razor]()を保存する。
+4. [Todo.razor](https://github.com/04100149/TodoList/blob/step10/TodoList/Pages/Todo.razor)を保存する。
 
-code: ![tag](../Images/tag.png) [Step 10](https://github.com/04100149/TodoList/releases/tag/step10)  
+code: ![tag](../Images/tag.png) [Step 10](https://github.com/04100149/TodoList/tree/step10)  
 
 ## 動作確認
 1. ![デバックの開始](../Images/NewProject-6.png) ボタンをクリックする。  

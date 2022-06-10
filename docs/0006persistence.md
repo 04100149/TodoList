@@ -1,5 +1,5 @@
 # データを永続化する
-code: ![tag](../Images/tag.png) [Step 4](https://github.com/04100149/TodoList/releases/tag/step4)  
+code: ![tag](../Images/tag.png) [Step 04](https://github.com/04100149/TodoList/tree/step04)
 
 ## Point
 - [永続化の設計をする](#%E6%B0%B8%E7%B6%9A%E5%8C%96%E3%81%AE%E8%A8%AD%E8%A8%88%E3%82%92%E3%81%99%E3%82%8B)
@@ -59,6 +59,7 @@ code: ![tag](../Images/tag.png) [Step 4](https://github.com/04100149/TodoList/re
          }
      }
 ```
+4. Todo.razorを保存する。
 ### Todoを読み込めるようにする
 - `./wwwroot/todos`に格納されているファイルをリストアップする。
 - ファイルごとに、`JsonSerializer`でデシリアライズしてできる`TodoItem`インスタンスを`todos`変数に追加する。
@@ -97,9 +98,9 @@ code: ![tag](../Images/tag.png) [Step 4](https://github.com/04100149/TodoList/re
 +        latestId = todos.Select<TodoItem, int>(x => x.Id).DefaultIfEmpty().Max() + 1;
      }
 ```
-4. [Icons.razor]()を保存する。
+4. [Todo.razor](https://github.com/04100149/TodoList/blob/step05/TodoList/Pages/Todo.razor)を保存する。
 
-code: ![tag](../Images/tag.png) [Step 5](https://github.com/04100149/TodoList/releases/tag/step5)  
+code: ![tag](../Images/tag.png) [Step 05](https://github.com/04100149/TodoList/tree/step05)
 
 ## 動作確認
 1. ![デバックの開始](../Images/NewProject-6.png) ボタンをクリックする。  

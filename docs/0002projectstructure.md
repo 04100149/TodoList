@@ -1,5 +1,5 @@
 # プロジェクトの構造
-code: ![tag](../Images/tag.png) [Step 1](https://github.com/04100149/TodoList/releases/tag/step1)  
+code: ![tag](../Images/tag.png) [Step 01](https://github.com/04100149/TodoList/tree/step01)
 
 プロジェクトの構造は次の通り。  
 ![プロジェクト構造](../Images/ProjectStructure-1.png)  

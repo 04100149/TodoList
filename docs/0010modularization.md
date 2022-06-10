@@ -1,5 +1,5 @@
 # モジュール化する
-code: ![tag](../Images/tag.png) [Step 8](https://github.com/04100149/TodoList/releases/tag/step8)  
+code: ![tag](../Images/tag.png) [Step 08](https://github.com/04100149/TodoList/tree/step08) 
 
 ## Point
 - [razorコンポーネント化する](#razor%E3%82%B3%E3%83%B3%E3%83%9D%E3%83%BC%E3%83%8D%E3%83%B3%E3%83%88%E5%8C%96%E3%81%99%E3%82%8B)
@@ -132,7 +132,7 @@ code: ![tag](../Images/tag.png) [Step 8](https://github.com/04100149/TodoList/re
                          </li>
                      </ul>
 ```
-8. [TodoBox.razor]()を保存する。
+8. [TodoBox.razor](https://github.com/04100149/TodoList/blob/step09/TodoList/Shared/TodoBox.razor)を保存する。
 9. **Todo.razor** を開き、表示部分をコンポーネント呼び出しに変更する。
 ```diff
      @foreach(var todo in todos.Where<TodoItem>(x=>!x.IsDone || showClosed).OrderBy<TodoItem, DateTime>(x=>x.TargetDate))
@@ -258,7 +258,7 @@ div.section {
     margin-bottom: 0px;
 }
 ```
-16. [TodoBox.razor.css]()を保存する。
+16. [TodoBox.razor.css](https://github.com/04100149/TodoList/blob/step09/TodoList/Shared/TodoBox.razor.css)を保存する。
 ### 永続化コードをサービス化する
 1. ソリューション エクスプローラの **Data** フォルダを右クリックし、 コンテキストメニューの **追加 - クラス** をクリックする。
 1. 名前を **TodoService.cs** にして **追加** ボタンを押す。  
@@ -341,7 +341,7 @@ namespace TodoList.Data
             RemoveTodoFile(todo.Id);
         }
 ```
-6. [TodoService.cs]()を保存する。
+6. [TodoService.cs](https://github.com/04100149/TodoList/blob/step09/TodoList/Data/TodoService.cs)を保存する。
 7. `Program.cs`を編集し、`TodoService`を`Singleton`として登録する。
 ```diff
  // Add services to the container.
@@ -350,7 +350,7 @@ namespace TodoList.Data
  builder.Services.AddSingleton<WeatherForecastService>();
 +builder.Services.AddSingleton<TodoService>();
 ```
-8. [Program.cs]()を保存する。
+8. [Program.cs](https://github.com/04100149/TodoList/blob/step09/TodoList/Program.cs)を保存する。
 9. Todo.razorを編集し、`TodoService`を`inject`する。
 ```diff
  @page "/todo"
@@ -415,9 +415,9 @@ namespace TodoList.Data
 +        TodoService.RemoveTodo(todo);
      }     
 ```
-13. [Todo.razor]()を保存する。
+13. [Todo.razor](https://github.com/04100149/TodoList/blob/step09/TodoList/Pages/Todo.razor)を保存する。
 
-code: ![tag](../Images/tag.png) [Step 9](https://github.com/04100149/TodoList/releases/tag/step9)  
+code: ![tag](../Images/tag.png) [Step 09](https://github.com/04100149/TodoList/tree/step09)  
 
 ## 動作確認
 1. ![デバックの開始](../Images/NewProject-6.png) ボタンをクリックする。  

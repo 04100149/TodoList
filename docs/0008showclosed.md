@@ -1,5 +1,5 @@
 # 完了したTodoを表示できるようにする
-code: ![tag](../Images/tag.png) [Step 6](https://github.com/04100149/TodoList/releases/tag/step6)  
+code: ![tag](../Images/tag.png) [Step 06](https://github.com/04100149/TodoList/tree/step06) 
 
 ## Point
 - [Todoの数を表示する](#todo%E3%81%AE%E6%95%B0%E3%82%92%E8%A1%A8%E7%A4%BA%E3%81%99%E3%82%8B)
@@ -46,9 +46,9 @@ code: ![tag](../Images/tag.png) [Step 6](https://github.com/04100149/TodoList/re
      </span>
  </h1>
 ```
-4. [Icons.razor]()を保存する。
+4. [Todo.razor](https://github.com/04100149/TodoList/blob/step07/TodoList/Pages/Todo.razor)を保存する。
 
-code: ![tag](../Images/tag.png) [Step 7](https://github.com/04100149/TodoList/releases/tag/step7)  
+code: ![tag](../Images/tag.png) [Step 07](https://github.com/04100149/TodoList/tree/step07) 
 
 ## 動作確認
 1. ![デバックの開始](../Images/NewProject-6.png) ボタンをクリックする。  

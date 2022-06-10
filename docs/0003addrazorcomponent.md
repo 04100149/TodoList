@@ -1,5 +1,5 @@
 # Webページの追加
-code: ![tag](../Images/tag.png) [Step 1](https://github.com/04100149/TodoList/releases/tag/step1)  
+code: ![tag](../Images/tag.png) [Step 01](https://github.com/04100149/TodoList/tree/step01)
 
 ## Point
 - [Todoページを追加する。](#todo%E3%83%9A%E3%83%BC%E3%82%B8%E3%82%92%E8%BF%BD%E5%8A%A0%E3%81%99%E3%82%8B)
@@ -23,21 +23,39 @@ code: ![tag](../Images/tag.png) [Step 1](https://github.com/04100149/TodoList/re
 
 }
 ```
-5. Todo.razorを保存する。  
+5. [Todo.razor](https://github.com/04100149/TodoList/blob/step02/TodoList/Pages/Todo.razor)を保存する。  
 ### サイドメニューから呼び出せるようにする。
 1. **Shared** フォルダの **NavMenu.razor** を開く。  
-1. [NavMenu.razor](https://github.com/04100149/TodoList/blob/6e3732fc737448440d44eebc03fa161cb38d2f79/TodoList/Shared/NavMenu.razor#L27-L31) に次のコードを追加する。    
-```HTML+razor
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="todo">
-                <span class="oi oi-task" aria-hidden="true"></span> Todo
-            </NavLink>
-        </div>
+1. NavMenu.razorに次のコードを追加する。    
+```diff
+     <nav class="flex-column">
+         <div class="nav-item px-3">
+             <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                 <span class="oi oi-home" aria-hidden="true"></span> Home
+             </NavLink>
+         </div>
+         <div class="nav-item px-3">
+             <NavLink class="nav-link" href="counter">
+                 <span class="oi oi-plus" aria-hidden="true"></span> Counter
+             </NavLink>
+         </div>
+         <div class="nav-item px-3">
+             <NavLink class="nav-link" href="fetchdata">
+                 <span class="oi oi-list-rich" aria-hidden="true"></span> Fetch data
+             </NavLink>
+         </div>
++        <div class="nav-item px-3">
++            <NavLink class="nav-link" href="todo">
++                <span class="oi oi-task" aria-hidden="true"></span> Todo
++            </NavLink>
++        </div>
+     </nav>
 ```
-3. **NavLink** がクリックされると、**href** アトリビュートに設定されているページに遷移する。この場合、**@page "/todo"** と宣言されているTodo.razorに遷移する。  
-1. NavMenu.razorを保存する。  
+- **NavLink** がクリックされると、**href** アトリビュートに設定されているページに遷移する。この場合、**@page "/todo"** と宣言されているTodo.razorに遷移する。  
+3. [NavMenu.razor](https://github.com/04100149/TodoList/blob/step02/TodoList/Shared/NavMenu.razor)を保存する。  
 
-code: ![tag](../Images/tag.png) [Step 2](https://github.com/04100149/TodoList/releases/tag/step2)  
+code: ![tag](../Images/tag.png) [Step 02](https://github.com/04100149/TodoList/tree/step02)
+
 
 ## 動作確認
 1. ![デバックの開始](../Images/NewProject-6.png) ボタンをクリックする。  

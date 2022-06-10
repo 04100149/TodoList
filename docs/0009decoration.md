@@ -1,5 +1,5 @@
 # 装飾する
-code: ![tag](../Images/tag.png) [Step 7](https://github.com/04100149/TodoList/releases/tag/step7)  
+code: ![tag](../Images/tag.png) [Step 07](https://github.com/04100149/TodoList/tree/step07) 
 
 ## Point
 - [cssを定義する](#css%E3%82%92%E5%AE%9A%E7%BE%A9%E3%81%99%E3%82%8B)
@@ -70,7 +70,7 @@ div.section ul.icon li:hover {
     margin-bottom: 0px;
 }
 ```
-6. Icons.razor.cssを保存する。  
+6. [Todo.razor.css](https://github.com/04100149/TodoList/blob/step08/TodoList/Pages/Todo.razor.css)を保存する。  
 ### cssに合わせて修正を行う
 1. Todo.razorを開き、Todo一つ分を`div`で囲みます。`div`の`class`は`section`とします。  
 これによりTodoが角丸の矩形で囲まれます。
@@ -211,9 +211,9 @@ div.section ul.icon li:hover {
 +                </td>
              </tr>
 ```
-2. [Todo.razor]()を保存する。
+2. [Todo.razor](https://github.com/04100149/TodoList/blob/step08/TodoList/Pages/Todo.razor)を保存する。
 
-code: ![tag](../Images/tag.png) [Step 8](https://github.com/04100149/TodoList/releases/tag/step8)  
+code: ![tag](../Images/tag.png) [Step 08](https://github.com/04100149/TodoList/tree/step08) 
 
 ## 動作確認
 1. ![デバックの開始](../Images/NewProject-6.png) ボタンをクリックする。  

@@ -1,5 +1,5 @@
 # Todoを編集/完了/削除できるようにする
-code: ![tag](../Images/tag.png) [Step 5](https://github.com/04100149/TodoList/releases/tag/step5)  
+code: ![tag](../Images/tag.png) [Step 05](https://github.com/04100149/TodoList/tree/step05)
 
 ## Point
 - [Todoを編集できるようにする](#todo%E3%82%92%E7%B7%A8%E9%9B%86%E3%81%A7%E3%81%8D%E3%82%8B%E3%82%88%E3%81%86%E3%81%AB%E3%81%99%E3%82%8B)
@@ -98,7 +98,7 @@ code: ![tag](../Images/tag.png) [Step 5](https://github.com/04100149/TodoList/re
             </td>
         </tr>
 ```
-5. Icons.razorを保存する。
+5. Todo.razorを保存する。
 ### Todoを完了できるようにする
 - 完了ボタンで`IsDone`を`true`に設定する。
 - 完了ボタンを追加する。
@@ -140,7 +140,7 @@ code: ![tag](../Images/tag.png) [Step 5](https://github.com/04100149/TodoList/re
          newMemo = todo.Memo;
      }
 ```
-5. Icons.razorを保存する。
+5. Todo.razorを保存する。
 ### Todoを削除できるようにする
 - 削除ボタンで`todos`から削除する。
 - 保存したファイルも削除する。
@@ -176,9 +176,9 @@ code: ![tag](../Images/tag.png) [Step 5](https://github.com/04100149/TodoList/re
 +                <span class="oi oi-trash" @onclick=@(_=>RemoveTodo(todo)) />
              </td>
 ```
-4. [Icons.razor]()を保存する。
+4. [Todo.razor](https://github.com/04100149/TodoList/blob/step06/TodoList/Pages/Todo.razor)を保存する。
 
-code: ![tag](../Images/tag.png) [Step 6](https://github.com/04100149/TodoList/releases/tag/step6)  
+code: ![tag](../Images/tag.png) [Step 06](https://github.com/04100149/TodoList/tree/step06) 
 
 ## 動作確認
 1. ![デバックの開始](../Images/NewProject-6.png) ボタンをクリックする。  
