@@ -5,17 +5,47 @@ namespace TodoList.Data
 {
     public class TodoService
     {
+        public event EventHandler TodoChanged = delegate { };
+        private int latestId;
+        public TodoService()
+        {
+            lock (this)
+            {
+                List<TodoItem> todos = LoadTodoFiles();
+                latestId = todos.Select<TodoItem, int>(x => x.Id).DefaultIfEmpty().Max() + 1;
+            }
+        }
+        public void AddTodo(TodoItem todo)
+        {
+            lock (this)
+            {
+                todo.Id = latestId++;
+                SaveTodoFile(todo);
+                TodoChanged(this, EventArgs.Empty);
+            }
+        }
         public void SaveTodo(TodoItem todo)
         {
-            SaveTodoFile(todo);
+            lock (this)
+            {
+                SaveTodoFile(todo);
+                TodoChanged(this, EventArgs.Empty);
+            }
         }
         public List<TodoItem> LoadTodos()
         {
-            return LoadTodoFiles();
+            lock (this)
+            {
+                return LoadTodoFiles();
+            }
         }
         public void RemoveTodo(TodoItem todo)
         {
-            RemoveTodoFile(todo.Id);
+            lock (this)
+            {
+                RemoveTodoFile(todo.Id);
+                TodoChanged(this, EventArgs.Empty);
+            }
         }
 
         #region 永続化

@@ -429,3 +429,8 @@ code: ![tag](../Images/tag.png) [Step 9](https://github.com/04100149/TodoList/re
 - 期限順に表示される。
 - 状況ごとに色分けされる。
 ![すべて表示](../Images/decoration-5.png)
+
+***
+- Prev [装飾する](0009decoration.md)
+- Next [複数クライアント対応](0011multiclient.md)
+

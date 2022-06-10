@@ -22,3 +22,7 @@ code: ![tag](../Images/tag.png) [Step 1](https://github.com/04100149/TodoList/re
 | Dockerfile | Docker用定義ファイル |
 | program.cs | サーバーを起動するアプリのエントリ ポイントであり、アプリ サービスとミドルウェアを構成する場所 |
 
+***
+- Prev [プロジェクト新規作成](0001newproject.md)
+- Next [Webページの追加](0003addrazorcomponent.md)
+

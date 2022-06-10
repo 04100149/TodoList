@@ -60,3 +60,8 @@ code: ![tag](../Images/tag.png) [Step 7](https://github.com/04100149/TodoList/re
 ![すべて表示](../Images/showclosed-3.png)
 1. **Open**をクリックすると、完了したTodoは表示されない。    
 ![すべて表示](../Images/showclosed-4.png)
+
+***
+- Prev [Todoを編集/完了/削除できるようにする](0007editremove.md)
+- Next [装飾する](0009decoration.md)
+

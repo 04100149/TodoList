@@ -197,3 +197,8 @@ code: ![tag](../Images/tag.png) [Step 6](https://github.com/04100149/TodoList/re
 ![Todo完了](../Images/editremove-6.png)
 1. 削除ボタンをクリックすると、表示からきえる。   
 ![Todo削除](../Images/editremove-7.png)
+
+***
+- Prev [データを永続化する](0006persistence.md)
+- Next [完了したTodoを表示できるようにする](0008showclosed.md)
+
