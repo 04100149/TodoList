@@ -117,6 +117,6 @@ code: ![tag](../Images/tag.png) [Step 5](https://github.com/04100149/TodoList/re
 ![Todoページ](../Images/persistence-7.png)
 
 ***
-- Prev [Todoを足せるようにする](docs/0005addtodo.md)
-- Next [Todoを編集/完了/削除できるようにする](docs/0007editremove.md)
+- Prev [Todoを足せるようにする](0005addtodo.md)
+- Next [Todoを編集/完了/削除できるようにする](0007editremove.md)
 

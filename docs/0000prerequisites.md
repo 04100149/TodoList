@@ -5,4 +5,4 @@
 ![Visual Studio 2022](../Images/Prerequisites-1.png)
 
 ***
-- Next [プロジェクト新規作成](docs/0001newproject.md)
+- Next [プロジェクト新規作成](0001newproject.md)

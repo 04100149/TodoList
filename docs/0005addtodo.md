@@ -137,7 +137,7 @@ code: ![tag](../Images/tag.png) [Step 4](https://github.com/04100149/TodoList/re
 ![Todo追加](../Images/addtodo-5.png)
 
 ***
-- Prev [Iconのスタイルを確認する](docs/0004icons.md)
-- Next [データを永続化する](docs/0006persistence.md)
+- Prev [Iconのスタイルを確認する](0004icons.md)
+- Next [データを永続化する](0006persistence.md)
 
 

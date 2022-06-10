@@ -227,6 +227,6 @@ code: ![tag](../Images/tag.png) [Step 8](https://github.com/04100149/TodoList/re
 ![すべて表示](../Images/decoration-5.png)
 
 ***
-- Prev [完了したTodoを表示できるようにする](docs/0008showclosed.md)
-- Next [モジュール化する](docs/0010modularization.md)
+- Prev [完了したTodoを表示できるようにする](0008showclosed.md)
+- Next [モジュール化する](0010modularization.md)
 

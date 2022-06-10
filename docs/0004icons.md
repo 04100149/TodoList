@@ -120,6 +120,6 @@ code: ![tag](../Images/tag.png) [Step 3](https://github.com/04100149/TodoList/re
 ![Icon確認ページ](../Images/Icons-6.png)
 
 ***
-- Prev [Webページの追加](docs/0003addrazorcomponent.md)
-- Next [Todoを足せるようにする](docs/0005addtodo.md)
+- Prev [Webページの追加](0003addrazorcomponent.md)
+- Next [Todoを足せるようにする](0005addtodo.md)
 

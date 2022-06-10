@@ -77,6 +77,6 @@ code: ![tag](../Images/tag.png) [Step 10](https://github.com/04100149/TodoList/r
 ![すべて表示](../Images/multiclient-4.png)
 
 ***
-- Prev [モジュール化する](docs/0010modularization.md)
-- Next [Dockerでホストする](docs/0012docker.md)
+- Prev [モジュール化する](0010modularization.md)
+- Next [Dockerでホストする](0012docker.md)
 

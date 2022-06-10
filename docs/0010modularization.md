@@ -431,6 +431,6 @@ code: ![tag](../Images/tag.png) [Step 9](https://github.com/04100149/TodoList/re
 ![すべて表示](../Images/decoration-5.png)
 
 ***
-- Prev [装飾する](docs/0009decoration.md)
-- Next [複数クライアント対応](docs/0011multiclient.md)
+- Prev [装飾する](0009decoration.md)
+- Next [複数クライアント対応](0011multiclient.md)
 

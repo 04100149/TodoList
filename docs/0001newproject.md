@@ -20,6 +20,6 @@ code: ![tag](../Images/tag.png) [Step 1](https://github.com/04100149/TodoList/re
 ![コンテナ開始](../Images/NewProject-7.png)
 
 ***
-- Prev [前提条件](docs/0000prerequisites.md)
-- Next [プロジェクトの構造](docs/0002projectstructure.md)
+- Prev [前提条件](0000prerequisites.md)
+- Next [プロジェクトの構造](0002projectstructure.md)
 
