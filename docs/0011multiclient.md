@@ -3,7 +3,7 @@ code: ![tag](../Images/tag.png) [Step 9](https://github.com/04100149/TodoList/re
 
 ## Point
 - [TodoServiceにイベントを追加する](#todoservice%E3%81%AB%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E3%82%92%E8%BF%BD%E5%8A%A0%E3%81%99%E3%82%8B)
-- [Idの管理をTodoServiceに移す]()
+- [Idの管理をTodoServiceに移す](#id%E3%81%AE%E7%AE%A1%E7%90%86%E3%82%92todoservice%E3%81%AB%E7%A7%BB%E3%81%99)
 - [イベントにより表示を更新する](#%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E3%81%AB%E3%82%88%E3%82%8A%E8%A1%A8%E7%A4%BA%E3%82%92%E6%9B%B4%E6%96%B0%E3%81%99%E3%82%8B)
 
 ## 手順
