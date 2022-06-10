@@ -60,6 +60,7 @@ code: ![tag](../Images/tag.png) [Step 9](https://github.com/04100149/TodoList/re
 +        {
 +            todo.Id = latestId++;
 +            SaveTodoFile(todo);
++            TodoChanged(this, EventArgs.Empty);
 +        }
          public void SaveTodo(TodoItem todo)
 ```
