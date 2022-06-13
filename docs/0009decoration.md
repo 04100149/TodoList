@@ -11,7 +11,8 @@ code: ![tag](../Images/tag.png) [Step 07](https://github.com/04100149/TodoList/t
 
 ## 手順
 ### cssを定義する
-- Razorコンポーネントは、同じフォルダに`ファイル名+".css"`という名前でcssファイルを作っておくと、そのコンポーネントだけに適応される。
+- Razorコンポーネントは、同じフォルダに`ファイル名+".css"`という名前でcssファイルを作っておくと、そのコンポーネントだけに適応される。  
+**参考** [ASP.NET Core Blazor の CSS の分離](https://docs.microsoft.com/ja-jp/aspnet/core/blazor/components/css-isolation?view=aspnetcore-6.0)
 1. ソリューション エクスプローラの **Pages** フォルダを右クリックし、 コンテキストメニューの **追加 - クラス** をクリックする。
 1. `スタイル シート`を選択する。  
 ![新しい項目の追加](../Images/decoration-1.png)
@@ -19,6 +20,7 @@ code: ![tag](../Images/tag.png) [Step 07](https://github.com/04100149/TodoList/t
 1. PagesフォルダにTodo.razor.cssが追加される。  
 ![追加されたTodo.razor.css](../Images/decoration-2.png)
 1. Todo.razor.cssを編集し、次のようにする。    
+**参考** [CSS リファレンス](https://developer.mozilla.org/ja/docs/Web/CSS/Reference)  
 ```CSS
 div.section {
     display: inline-block; 

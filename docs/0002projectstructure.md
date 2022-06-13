@@ -22,6 +22,8 @@ code: ![tag](../Images/tag.png) [Step 01](https://github.com/04100149/TodoList/t
 | Dockerfile | Docker用定義ファイル |
 | program.cs | サーバーを起動するアプリのエントリ ポイントであり、アプリ サービスとミドルウェアを構成する場所 |
 
+**参考** [ASP.NET Core Blazor プロジェクトの構造](https://docs.microsoft.com/ja-jp/aspnet/core/blazor/project-structure?view=aspnetcore-6.0)
+
 ***
 - Prev [プロジェクト新規作成](0001newproject.md)
 - Next [Webページの追加](0003addrazorcomponent.md)

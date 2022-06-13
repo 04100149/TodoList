@@ -90,7 +90,9 @@ code: ![tag](../Images/tag.png) [Step 08](https://github.com/04100149/TodoList/t
 ```diff
 +@using TodoList.Data
 ```
-4. `TodoItem`を外部から渡せるように`[Parameter]`属性のプロパティを追加する。
+4. `TodoItem`を外部から渡せるように`[Parameter]`属性のプロパティを追加する。  
+**参考** [ASP.NET Core Razor コンポーネント](https://docs.microsoft.com/ja-jp/aspnet/core/blazor/components/?view=aspnetcore-6.0)#
+[コンポーネントのパラメーター](https://docs.microsoft.com/ja-jp/aspnet/core/blazor/components/?view=aspnetcore-6.0#component-parameters)
 ```diff
  @code {
 +    [Parameter]
@@ -99,7 +101,9 @@ code: ![tag](../Images/tag.png) [Step 08](https://github.com/04100149/TodoList/t
      private string GetBackgroundColor(TodoItem todo)
 ```
 5. 表示部分の`todo`を`Item`に置換する。  
-6. ボタン用の`[Parameter]`属性の`EventCallback`を追加する。
+6. ボタン用の`[Parameter]`属性の`EventCallback`を追加する。  
+**参考** [ASP.NET Core Blazor のイベント処理](https://docs.microsoft.com/ja-jp/aspnet/core/blazor/components/event-handling?view=aspnetcore-6.0)#
+[EventCallback](https://docs.microsoft.com/ja-jp/aspnet/core/blazor/components/event-handling?view=aspnetcore-6.0#eventcallback)
 ```diff
      [Parameter]
      public TodoItem Item { get; set; }
@@ -260,6 +264,9 @@ div.section {
 ```
 16. [TodoBox.razor.css](https://github.com/04100149/TodoList/blob/step09/TodoList/Shared/TodoBox.razor.css)を保存する。
 ### 永続化コードをサービス化する
+- サービス用のクラスを作成し、シングルトンとして追加する。  
+**参考** [ASP.NET Core Blazor 依存関係の挿入](https://docs.microsoft.com/ja-jp/aspnet/core/blazor/fundamentals/dependency-injection?view=aspnetcore-6.0)#
+[サービスを Blazor Server アプリに追加する](https://docs.microsoft.com/ja-jp/aspnet/core/blazor/fundamentals/dependency-injection?view=aspnetcore-6.0#add-services-to-a-blazor-server-app)
 1. ソリューション エクスプローラの **Data** フォルダを右クリックし、 コンテキストメニューの **追加 - クラス** をクリックする。
 1. 名前を **TodoService.cs** にして **追加** ボタンを押す。  
 ![追加されたTodoService.cs](../Images/modularization-4.png)

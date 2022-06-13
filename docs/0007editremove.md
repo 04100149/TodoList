@@ -12,7 +12,9 @@ code: ![tag](../Images/tag.png) [Step 05](https://github.com/04100149/TodoList/t
 - 編集中は表示を変更する。
   - IDを表示する。
   - **Add todo**ボタンを非表示にする。
-  - **Done**ボタンと**Cancel**ボタンを表示する。
+  - **Done**ボタンと**Cancel**ボタンを表示する。  
+**参考** [ASP.NET Core の Razor 構文リファレンス](https://docs.microsoft.com/ja-jp/aspnet/core/mvc/views/razor?view=aspnetcore-6.0)#
+[制御構造](https://docs.microsoft.com/ja-jp/aspnet/core/mvc/views/razor?view=aspnetcore-6.0#control-structures)
 1. Todo.razorを開き、`@code{}`内に編集用のコードを追加する。
 ```C#
     private TodoItem? editingItem = null;

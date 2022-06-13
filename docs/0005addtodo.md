@@ -44,7 +44,9 @@ namespace TodoList.Data
  
  }
 ```
-3. `@foreach`を使い、`todos`の情報を表示する。
+3. `@foreach`を使い、`todos`の情報を表示する。  
+**参考** [ASP.NET Core の Razor 構文リファレンス](https://docs.microsoft.com/ja-jp/aspnet/core/mvc/views/razor?view=aspnetcore-6.0)#
+[制御構造](https://docs.microsoft.com/ja-jp/aspnet/core/mvc/views/razor?view=aspnetcore-6.0#control-structures)
 ```HTML+razor
 <div>
     @foreach(var todo in todos)
@@ -74,7 +76,10 @@ namespace TodoList.Data
 ### 入力項目を追加する
 - `input`や`textarea`で入力項目を作成する。  
 - 入力項目と変数を`@bind`で紐づける。
-- 追加ボタンに`@onclick`でTodo追加用の関数と紐づける。
+- 追加ボタンに`@onclick`でTodo追加用の関数と紐づける。  
+**参考** [ASP.NET Core Blazor データ バインディング](https://docs.microsoft.com/ja-jp/aspnet/core/blazor/components/data-binding?view=aspnetcore-6.0)  
+**参考** [ASP.NET Core Blazor のイベント処理](https://docs.microsoft.com/ja-jp/aspnet/core/blazor/components/event-handling?view=aspnetcore-6.0)
+
 1. Todo.razorを開き、入力項目を追加する。
 ```HTML+razor
 <div>

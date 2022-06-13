@@ -56,6 +56,7 @@ code: ![tag](../Images/tag.png) [Step 01](https://github.com/04100149/TodoList/t
 
 code: ![tag](../Images/tag.png) [Step 02](https://github.com/04100149/TodoList/tree/step02)
 
+**参考** [ASP.NET Core の Blazor ルーティングとナビゲーション](https://docs.microsoft.com/ja-jp/aspnet/core/blazor/fundamentals/routing?view=aspnetcore-6.0)
 
 ## 動作確認
 1. ![デバックの開始](../Images/NewProject-6.png) ボタンをクリックする。  

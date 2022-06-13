@@ -77,7 +77,8 @@ code: ![tag](../Images/tag.png) [Step 02](https://github.com/04100149/TodoList/t
 ```
 3. Icons.razorを保存する。
 ### CSSでスタイルを変更する
-- Razorコンポーネントは、同じフォルダに`ファイル名+".css"`という名前でcssファイルを作っておくと、そのコンポーネントだけに適応される。
+- Razorコンポーネントは、同じフォルダに`ファイル名+".css"`という名前でcssファイルを作っておくと、そのコンポーネントだけに適応される。  
+**参考** [ASP.NET Core Blazor の CSS の分離](https://docs.microsoft.com/ja-jp/aspnet/core/blazor/components/css-isolation?view=aspnetcore-6.0)
 1. ソリューション エクスプローラの **Pages** フォルダを右クリックし、 コンテキストメニューの **追加 - クラス** をクリックする。
 1. `スタイル シート`を選択する。  
 ![新しい項目の追加](../Images/Icons-3.png)
